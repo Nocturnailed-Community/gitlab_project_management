@@ -23,6 +23,7 @@
         'views/project_project_views.xml',
         'data/ir_cron.xml',
     ],
+    'images': ['static/description/main_screenshot.png'],
     'demo': [],
     'installable': True,
     'application': True,

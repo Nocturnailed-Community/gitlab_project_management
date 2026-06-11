@@ -15,9 +15,9 @@
     """,
     'author': 'Muhammad Ikhwan Fathulloh',
     'website': 'https://github.com/Muhammad-Ikhwan-Fathulloh',
-    'depends': ['project', 'base_setup'],
+    'depends': ['base', 'project', 'base_setup'],
     'data': [
-        'security/ir.model.access.xml',
+        'security/ir.model.access.csv',
         'views/gitlab_instance_views.xml',
         'views/gitlab_repository_views.xml',
         'views/project_project_views.xml',

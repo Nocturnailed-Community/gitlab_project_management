@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gitlab_instance,gitlab.instance,model_gitlab_instance,project.group_project_manager,1,1,1,1
+access_gitlab_repository,gitlab.repository,model_gitlab_repository,project.group_project_manager,1,1,1,1
+access_gitlab_branch,gitlab.branch,model_gitlab_branch,project.group_project_manager,1,1,1,1
+access_gitlab_commit,gitlab.commit,model_gitlab_commit,project.group_project_manager,1,1,1,1

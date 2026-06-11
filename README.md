@@ -33,17 +33,14 @@ Modul Odoo 18 untuk integrasi dengan GitLab.com — kelola multi-repository, tra
 ```bash
 cd /opt/odoo/custom-addons/
 # atau di path addons custom Anda
-git clone https://github.com/Nocturnailed-Community/OdooGitlabProjectManagement.git
+git clone https://github.com/Nocturnailed-Community/gitlab_project_management.git
 ```
 
 ### Langkah 2: Pindahkan Folder Module
 
 ```bash
 # Pastikan folder module berada langsung di addons path
-mv OdooGitlabProjectManagement/gitlab_project_management /opt/odoo/custom-addons/gitlab_project_management
-
-# Hapus folder wrapper jika tidak diperlukan
-rm -rf OdooGitlabProjectManagement
+cp -r gitlab_project_management /opt/odoo/custom-addons/gitlab_project_management
 ```
 
 ### Langkah 3: Pastikan Addons Path Terdaftar

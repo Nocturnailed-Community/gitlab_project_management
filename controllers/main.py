@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 import logging
-from odoo import http
+from odoo import http, fields
 from odoo.http import request
 
 _logger = logging.getLogger(__name__)
@@ -53,4 +53,4 @@ class GitLabWebhookController(http.Controller):
                     'web_url': c['url'],
                     'repository_id': repo.id,
                 })
-        repo.sudo().last_sync_date = http.request.env.cr.now()
+        repo.sudo().last_sync_date = fields.Datetime.now()

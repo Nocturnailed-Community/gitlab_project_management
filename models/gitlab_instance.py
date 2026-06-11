@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
+import logging
+
+_logger = logging.getLogger(__name__)
+_logger.info("Loading GitLab Instance model")
 
 class GitLabInstance(models.Model):
     _name = 'gitlab.instance'

@@ -65,6 +65,9 @@ sudo systemctl restart odoo
 1. Login ke Odoo sebagai Administrator
 2. Aktifkan **Developer Mode**: Settings → Developer Tools → Activate Developer Mode
 3. Klik **Apps** → **Update Apps List** → **Update**
+<p align="center">
+  <img src="gitlab_project_management/static/description/icon.png" alt="GitLab Project Management Icon" width="200"/>
+</p>
 4. Cari `GitLab Project Management` di daftar Apps
 5. Klik **Activate** / **Install**
 

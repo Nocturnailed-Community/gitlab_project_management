@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="edit_project_inherit_gitlab" model="ir.ui.view">
+        <field name="name">project.project.form.inherit.gitlab</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_gitlab_commits" type="object" class="oe_stat_button" icon="fa-code-fork">
+                    <field name="gitlab_commit_count" string="Commits" widget="statinfo"/>
+                </button>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page name="gitlab_settings" string="GitLab">
+                    <group>
+                        <field name="doc_progress" widget="priority" string="Documentation Progress"/>
+                        <field name="gitlab_repository_ids">
+                            <list editable="bottom">
+                                <field name="instance_id"/>
+                                <field name="name"/>
+                                <field name="gitlab_project_id"/>
+                            </list>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_project_kanban_inherit_gitlab" model="ir.ui.view">
+        <field name="name">project.project.kanban.inherit.gitlab</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_kanban_primary_left')]" position="inside">
+                <div class="mt-2">
+                    <span class="badge rounded-pill text-bg-info">
+                        Docs: <field name="doc_progress"/>%
+                    </span>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="gitlab_repository_view_tree" model="ir.ui.view">
+        <field name="name">gitlab.repository.view.tree</field>
+        <field name="model">gitlab.repository</field>
+        <field name="arch" type="xml">
+            <list string="GitLab Repositories">
+                <field name="name"/>
+                <field name="instance_id"/>
+                <field name="project_id"/>
+                <field name="last_sync_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="gitlab_repository_view_form" model="ir.ui.view">
+        <field name="name">gitlab.repository.view.form</field>
+        <field name="model">gitlab.repository</field>
+        <field name="arch" type="xml">
+            <form string="GitLab Repository">
+                <header>
+                    <button name="action_sync_now" type="object" string="Sync Now" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="instance_id"/>
+                            <field name="gitlab_project_id"/>
+                        </group>
+                        <group>
+                            <field name="project_id"/>
+                            <field name="active"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Branches" name="branches">
+                            <field name="branch_ids">
+                                <list>
+                                    <field name="name"/>
+                                    <field name="is_default"/>
+                                    <field name="protected"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Commits" name="commits">
+                            <field name="commit_ids">
+                                <list>
+                                    <field name="authored_date"/>
+                                    <field name="name" string="Hash"/>
+                                    <field name="author_name"/>
+                                    <field name="title"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_gitlab_repository" model="ir.actions.act_window">
+        <field name="name">GitLab Repositories</field>
+        <field name="res_model">gitlab.repository</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_gitlab_repository" name="Repositories" parent="menu_gitlab_root" action="action_gitlab_repository" sequence="20"/>
+</odoo>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --odoo-purple: #714B67;
+            --gitlab-orange: #FC6D26;
+            --gitlab-purple: #2E2E2E;
+            --glass: rgba(255, 255, 255, 0.1);
+            --text-main: #333;
+            --text-muted: #666;
+            --bg-light: #F8F9FA;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            background-color: #fff;
+        }
+        .oe_styling_v8 {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, var(--odoo-purple) 0%, #4e3447 100%);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .badge-item {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-weight: 600;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--odoo-purple);
+            margin: 60px 0 30px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eee;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--gitlab-orange);
+        }
+        .feature-h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        .feature-p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .screenshot-container {
+            margin-top: 60px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+            border: 8px solid #333;
+        }
+        .screenshot-container img {
+            width: 100%;
+            display: block;
+        }
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 40px;
+        }
+        .tech-tag {
+            background: #eee;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: #555;
+            font-weight: 500;
+        }
+        .footer-cta {
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 60px;
+            background: var(--bg-light);
+            border-radius: 20px;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: var(--odoo-purple);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+        .btn-primary:hover {
+            background: #4e3447;
+        }
+    </style>
+</head>
+<body>
+    <div class="oe_styling_v8">
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <h1 class="hero-title">GitLab + Odoo</h1>
+            <p class="hero-subtitle">Transform standard projects into high-performance engineering hubs. Seamlessly sync repositories, track every commit, and monitor documentation progress in one unified dashboard.</p>
+            
+            <div class="badge-grid">
+                <div class="badge-item">🚀 Real-time Webhooks</div>
+                <div class="badge-item">📊 Commit Timelines</div>
+                <div class="badge-item">🔗 Multi-Repository</div>
+                <div class="badge-item">📄 Doc Tracking</div>
+            </div>
+        </header>
+
+        <!-- Main Screenshot -->
+        <section class="screenshot-container">
+            <img src="main_screenshot.png" alt="GitLab Project Management Dashboard">
+        </section>
+
+        <h2 class="section-title">Seamless Engineering Workflow</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📁</div>
+                <h3 class="feature-h3">Multi-Repo Management</h3>
+                <p class="feature-p">Connect as many GitLab repositories as you need to a single Odoo project. Unified visibility for complex distributed systems.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-h3">Instant Sync</h3>
+                <p class="feature-p">Utilize GitLab webhooks to pull push events in real-time. No more manual updates—Odoo knows what happens as it happens.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3 class="feature-h3">Doc Progress Monitoring</h3>
+                <p class="feature-p">Keep track of your project's knowledge base. A dedicated documentation progress meter ensures your team stays on top of technical docs.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Technical Excellence</h2>
+        <div class="tech-list">
+            <span class="tech-tag">Odoo 18.0</span>
+            <span class="tech-tag">Python 3.10+</span>
+            <span class="tech-tag">GitLab REST API v4</span>
+            <span class="tech-tag">Webhook Integration</span>
+            <span class="tech-tag">LGPL-3 License</span>
+        </div>
+
+        <!-- Footer CTA -->
+        <div class="footer-cta">
+            <h2 style="margin-bottom: 20px;">Ready to boost your project productivity?</h2>
+            <p style="margin-bottom: 30px; color: var(--text-muted);">Join the Nocturnailed community and take your software development lifecycle to the next level.</p>
+            <a href="https://github.com/Nocturnailed-Community/gitlab_project_management" class="btn-primary">View on GitHub</a>
+        </div>
+    </div>
+</body>
+</html>

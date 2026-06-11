@@ -14,7 +14,7 @@
         - Documentation progress dashboard
     """,
     'author': 'Muhammad Ikhwan Fathulloh',
-    'website': 'https://github.com/Muhammad-Ikhwan-Fathulloh',
+    'website': 'https://github.com/Nocturnailed-Community/gitlab_project_management',
     'depends': ['base', 'project', 'base_setup'],
     'data': [
         'security/ir.model.access.csv',

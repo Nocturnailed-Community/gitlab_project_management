@@ -1,9 +1,13 @@
 # GitLab Project Management for Odoo 18
 
+<p align="center">
+  <img src="static/description/icon.png" alt="GitLab Project Management Icon" width="200"/>
+</p>
+
 [![License: LGPL-3](https://img.shields.io/badge/License-LGPL--3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Odoo Version](https://img.shields.io/badge/Odoo-18.0-purple.svg)](https://www.odoo.com)
 
-Modul Odoo 18 untuk integrasi dengan GitLab.com — kelola multi-repository, tracking commit, branch, dan progress dokumentasi langsung dari Odoo.
+Modul Odoo 18 untuk integrasi dengan GitLab.com - kelola multi-repository, tracking commit, branch, dan progress dokumentasi langsung dari Odoo.
 
 ## ✨ Fitur Utama
 
@@ -262,7 +266,7 @@ X-Gitlab-Event: Push Hook
 
 ## 👨‍💻 Kontributor
 
-- **Muhammad Ikhwan Fathulloh** — Creator & Maintainer
+- **Muhammad Ikhwan Fathulloh** - Creator & Maintainer
   - GitHub: [@Muhammad-Ikhwan-Fathulloh](https://github.com/Muhammad-Ikhwan-Fathulloh)
 
 ## 📝 Lisensi

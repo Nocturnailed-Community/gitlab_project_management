@@ -1,9 +1,13 @@
 # GitLab Project Management for Odoo 18
 
+<p align="center">
+  <img src="gitlab_project_management/static/description/icon.png" alt="GitLab Project Management Icon" width="200"/>
+</p>
+
 [![License: LGPL-3](https://img.shields.io/badge/License-LGPL--3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Odoo Version](https://img.shields.io/badge/Odoo-18.0-purple.svg)](https://www.odoo.com)
 
-Modul Odoo 18 untuk integrasi dengan GitLab.com — kelola multi-repository, tracking commit, branch, dan progress dokumentasi langsung dari Odoo.
+Modul Odoo 18 untuk integrasi dengan GitLab.com - kelola multi-repository, tracking commit, branch, dan progress dokumentasi langsung dari Odoo.
 
 ## ✨ Fitur Utama
 
@@ -147,14 +151,15 @@ gitlab_project_management/
 ├── __init__.py                  # Root imports
 ├── __manifest__.py              # Module metadata & dependencies
 ├── models/
-│   └── __init__.py              # Semua model definitions
-│       ├── GitLabInstance       # Koneksi ke GitLab (URL + Token)
-│       ├── GitLabRepository     # Link repository ke project
-│       ├── GitLabBranch         # Data branch per repository
-│       ├── GitLabCommit         # Data commit per repository
-│       └── ProjectProject       # Inherit project.project
+│   ├── __init__.py              # Model imports
+│   ├── gitlab_instance.py       # Koneksi ke GitLab (URL + Token)
+│   ├── gitlab_repository.py     # Link repository ke project
+│   ├── gitlab_branch.py         # Data branch per repository
+│   ├── gitlab_commit.py         # Data commit per repository
+│   └── project_project.py       # Inherit project.project
 ├── controllers/
-│   └── __init__.py              # Webhook controller (/gitlab/webhook)
+│   ├── __init__.py              # Controller imports
+│   └── main.py                  # Webhook controller (/gitlab/webhook)
 ├── views/
 │   ├── gitlab_instance_views.xml
 │   ├── gitlab_repository_views.xml
@@ -265,7 +270,7 @@ X-Gitlab-Event: Push Hook
 
 ## 👨‍💻 Kontributor
 
-- **Muhammad Ikhwan Fathulloh** — Creator & Maintainer
+- **Muhammad Ikhwan Fathulloh** - Creator & Maintainer
   - GitHub: [@Muhammad-Ikhwan-Fathulloh](https://github.com/Muhammad-Ikhwan-Fathulloh)
 
 ## 📝 Lisensi
